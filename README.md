@@ -252,7 +252,7 @@ uv run pytest backend/tests/ -v
 | **Vector Store** | ChromaDB + Vertex AI Embeddings |
 | **API** | FastAPI + Uvicorn |
 | **Frontend** | Streamlit |
-| **Containerisation** | Docker → Cloud Run |
+| **Containerization** | Docker → Cloud Run |
 | **Observability** | OpenTelemetry, Cloud Trace, LangSmith |
 | **Package Manager** | uv |
 
