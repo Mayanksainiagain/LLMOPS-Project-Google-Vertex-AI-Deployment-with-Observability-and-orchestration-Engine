@@ -111,6 +111,8 @@ ComplianceQAPipeline/
   - Cloud Storage API
   - Cloud Trace API
 
+👉 For detailed Google Cloud setup (service account, API enablement, bucket, and local auth), see [GOOGLE_INSTALLATION_INSTRUCTIONS.md](./GOOGLE_INSTALLATION_INSTRUCTIONS.md).
+
 ### 1. Clone & Install
 
 ```bash
