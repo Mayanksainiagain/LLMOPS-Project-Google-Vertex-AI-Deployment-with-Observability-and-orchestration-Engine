@@ -28,6 +28,7 @@ gcloud services enable \
 ## 4) Create a service account and credentials
 ```bash
 SA_NAME=brand-guardian-runner
+GCP_PROJECT_ID=$(gcloud config get-value project)
 gcloud iam service-accounts create $SA_NAME --display-name "Brand Guardian Runner"
 
 # Grant minimal roles
@@ -48,7 +49,6 @@ gcloud projects add-iam-policy-binding $GCP_PROJECT_ID \
 gcloud iam service-accounts keys create ~/brand-guardian-key.json \
   --iam-account="${SA_NAME}@${GCP_PROJECT_ID}.iam.gserviceaccount.com"
 export GOOGLE_APPLICATION_CREDENTIALS=~/brand-guardian-key.json
-gcloud auth application-default login
 ```
 
 ## 5) Create a GCS bucket for staging artifacts
@@ -59,8 +59,8 @@ gsutil mb -l us-central1 gs://${GCS_BUCKET_NAME}
 
 ## 6) Clone the repo and install dependencies
 ```bash
-git clone <repo-url>
-cd ComplianceQAPipeline
+git clone https://github.com/Mayanksainiagain/LLMOPS-Project-Google-Vertex-AI-Deployment-with-Observability-and-orchestration-Engine.git
+cd LLMOPS-Project-Google-Vertex-AI-Deployment-with-Observability-and-orchestration-Engine
 uv sync
 ```
 
@@ -70,7 +70,7 @@ Create a `.env` file in the repo root:
 GCP_PROJECT_ID=<YOUR_PROJECT_ID>
 GCP_LOCATION=us-central1
 VERTEX_AI_MODEL=gemini-2.0-flash-001
-GCS_BUCKET_NAME=${GCS_BUCKET_NAME}
+GCS_BUCKET_NAME=brand-guardian-<YOUR_PROJECT_ID>
 VECTOR_STORE_TYPE=chromadb
 GOOGLE_APPLICATION_CREDENTIALS=/absolute/path/to/brand-guardian-key.json
 ```
