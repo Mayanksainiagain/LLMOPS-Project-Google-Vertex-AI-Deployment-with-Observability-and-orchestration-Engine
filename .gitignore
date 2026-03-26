@@ -1,0 +1,7 @@
+node_modules
+/backend/src/graph/
+.env
+service-account.json
+/Y
+/.venv
+/.vscode

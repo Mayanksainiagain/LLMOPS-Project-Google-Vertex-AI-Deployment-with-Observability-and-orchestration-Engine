@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.benchmarks/
+
+# Virtual environment
+
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Git
+.git/
+.gitignore
+
+# Google Cloud SDK (bundled in Y/ directory — DO NOT include in Docker image!)
+Y/
+
+# OS files
+*.DS_Store
+Thumbs.db
+
+# Test files (not needed in production)
+backend/tests/
+test_output.txt
+
+# Dev files
+*.md
+*.png
+service-account.json
+.env
