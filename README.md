@@ -260,6 +260,3 @@ uv run pytest backend/tests/ -v
 
 ---
 
-## 📄 License
-
-This project is for educational and demonstration purposes.
